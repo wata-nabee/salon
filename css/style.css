@@ -33,7 +33,7 @@ li {
 }
 
 .background {
-  width: 1300px;
+  width: 1350px;
   height: 6500px;
   overflow-x: hidden;
   position: absolute;
@@ -1021,8 +1021,8 @@ footer p {
 
   /* --ニュース ------------------------------- */
   #news {
-    height: 1000px;
-    padding: 80px 20px 30px 20px;
+    height: auto;
+    padding: 37px 20px 30px 20px;
   }
   
   .number5 {
@@ -1037,6 +1037,7 @@ footer p {
     top: 30px;
     left: 20px;
     font-size: 16px;
+    text-align: left;
   }
   
   .news-list {
@@ -1108,7 +1109,12 @@ footer p {
     transition: none;
   }
 
-  /* ---インフォメーション ------------------------ */  
+  /* ---インフォメーション ------------------------ */ 
+  #shop-information {
+    height: auto;
+    padding-top: 1px;
+  }
+
   .number6 {
     width: 80px;
     top: 10px;
