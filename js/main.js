@@ -1,3 +1,63 @@
+// ローディング画面
+
+ $(function(){});
+setTimeout(function(){ 
+  $.when(
+    $('.loader').delay(3000).fadeOut(500)
+  ).done(function(){
+    $('.logo').css("display","block");
+  });
+  $.when(
+    $('#loading').delay(5000).fadeOut(500)
+  ).done(function(){
+    $('.logo').css("z-index",10);
+  });
+    
+});
+
+
+
+$(function(){
+  // スムーススクロール----------------------------------------------------------
+  // #で始まるa要素をクリックした場合に処理（"#"←ダブルクォーテンションで囲むのを忘れずに。忘れるとjQueryのバージョンによっては動かない。。）
+  $('a[href^="#"]').click(function(){
+    // 移動先を0px調整する。0を30にすると30px下にずらすことができる。
+    var adjust = 0;
+    // スクロールの速度（ミリ秒）
+    var speed = 400;
+    // アンカーの値取得 リンク先（href）を取得して、hrefという変数に代入
+    var href= $(this).attr("href");
+    // 移動先を取得 リンク先(href）のidがある要素を探して、targetに代入
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    // 移動先を調整 idの要素の位置をoffset()で取得して、positionに代入
+    var position = target.offset().top + adjust;
+    // スムーススクロール linear（等速） or swing（変速）
+    $('body,html').animate({scrollTop:position}, speed, 'swing');
+    return false;
+  });
+
+// logoの画面中央配置
+  checkWidth = function(){
+    // ブラウザの横幅を取得
+    var browserWidth = $(window).width();
+ 
+    // ボックスの横幅を取得
+    var boxW = $(".logo").width();
+ 
+    // 左端から離す距離pxを計算
+    var plusPxW = ((browserWidth - boxW)/2);
+ 
+    // CSSで追加
+    $('.logo').css({'left': plusPxW + "px"});
+  };
+
+  // リアルタイムで縦・横幅を取得
+  $(function(){
+    checkWidth();
+    $(window).resize(checkWidth);
+  });
+
+  // ページトップへ戻る------------------------------------------------------------
   $(function() {
     var pagetop = $('#toTop');
     $(window).scroll(function () {
