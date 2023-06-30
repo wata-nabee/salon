@@ -36,7 +36,7 @@ $(function(){
     return false;
   });
 
-// logoの画面中央配置
+  // logoの画面中央配置
   checkWidth = function(){
     // ブラウザの横幅を取得
     var browserWidth = $(window).width();
@@ -73,7 +73,7 @@ $(function(){
     });
   });
 
-   jQuery(function() {  //フッターに入ったら消える
+  jQuery(function() {  //フッターに入ったら消える
 
     var footer = $('.footer').innerHeight(); // footerの高さを取得
     
@@ -90,16 +90,16 @@ $(function(){
     };
   });
 
- // #page-topをクリックした際の設定
- $('#page-top').click(function () {
-     $('body,html').animate({
-         scrollTop: 0//ページトップまでスクロール
-     }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
-     return false;//リンク自体の無効化
- });
-
-
- // スクロールしたら下線
+  // #page-topをクリックした際の設定
+$('#page-top').click(function () {
+  $('body,html').animate({
+      scrollTop: 0//ページトップまでスクロール
+  }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+  return false;//リンク自体の無効化
+});
+  
+  
+  // スクロールしたら下線
   jQuery(window).scroll(function() {
     let scrollTop = jQuery(window).scrollTop(); // スクロール上部の位置
     let areaTop = jQuery("#concept").offset().top; // 対象エリアの上部の位置
@@ -163,7 +163,7 @@ $(function(){
   });
 
 
- 
+
   // headerのスライダー
   //slickを初期化した際に発生するイベント（初期表示のスライドに.slick-animationのクラスをつける)
   $('#header-slider').on('init', function () {
