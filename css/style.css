@@ -188,10 +188,10 @@ header {
   transform: scale(0, 1);
   transform-origin: center top;
   transition: all 0.5s;
-}
+} 
 
 #header-list li:hover::before,
-#header-list li.activ::before {
+#header-list li.active::before {
   transform: scale(1, 1);
 }
 
@@ -282,7 +282,7 @@ header {
   animation: zoomOut 9s 0s forwards ;
 }
 
-#toTop {
+#toTop {  /*ページトップボタン*/
   width: 100px;
   position: fixed;
   right: 30px;
@@ -291,6 +291,13 @@ header {
   cursor: pointer;
   display: none;
 }
+
+/*footerまでスクロールしたら消す*/
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 
 /* -----コンセプト-------------------------------*/
 #concept {
