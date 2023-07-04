@@ -799,12 +799,12 @@ footer p {
 
   section {
     padding-top: 30px;
+    margin-bottom: 60px;
   }
   
   h2 {
     display: block;
     position: static;
-    margin-bottom: 20px;
     text-align: center;
     font-size: 21px;
   }
@@ -821,9 +821,11 @@ footer p {
   }
   
   .container {
+    height: auto;
     width: 100%;
     margin: 0 auto;
-    top: 90px;
+    top: 30px;
+    position: relative;
   }
 
   .logo {
@@ -848,10 +850,16 @@ footer p {
     top: 190px;
   }
 
+  /* ヘッダー　----------------------------------- */
+  header {
+    margin-bottom: 0px;
+  }
+
   /* コンセプト -----------------------------------*/
 
   #concept {
-    height: 760px;
+    height: auto;
+    margin-top: 30px;
   }
 
   .number1 {
@@ -859,16 +867,18 @@ footer p {
   }
   
   .container1 {
+    padding-top: 320px;
+    padding-bottom: 20px;
     background-image: url(../img/concept.jpg);
     background-size: 100% 300px;
   }
   
   .concept-text {
-    position: static;
+   float: none;
     width: 95%;
-    height: 300px;
+    height: auto;
     padding: 30px 15px 20px 15px;
-    margin: 320px 15px 30px 15px;
+    margin: 20px 15px 30px 15px;
     font-family: "ＭＳゴシック";
     background-color: #ffffff;
   }
@@ -888,7 +898,7 @@ footer p {
   /* ヘアーサロン ------------------------------------*/
 
   #hair-salon {
-    height: 945px;
+    height: auto;
   }
   
   #hair-salon h2,
@@ -959,7 +969,7 @@ footer p {
   
   /* セルフリムーバル　------------------------------ */
   #self-removal {
-    height: 1285px;
+    height: auto;
   }
   
   .container3 {
@@ -983,7 +993,7 @@ footer p {
   
   .s3-menu {
     display: block;
-    padding: 50px 50px 30px 50px;
+    padding: 30px;
     background-color: #ffffff;
   }
   
@@ -1012,12 +1022,16 @@ footer p {
 
   /* カフェ --------------------------------- */
   #cafe {
-    height: 590px;
+    height: auto;
   }
   
+  .container4 {
+    padding-bottom: 30px;
+  }
+
   .cafe-text {
     width: 90%;
-    margin: 20px auto 50px auto;
+    margin: 20px auto;
     padding: 30px;
     text-align: left;
   }
