@@ -1026,12 +1026,12 @@ footer p {
   }
   
   .container4 {
-    padding-bottom: 30px;
+    padding-bottom: 50px;
   }
 
   .cafe-text {
     width: 90%;
-    margin: 20px auto;
+    margin: 20px auto 50px auto;
     padding: 30px;
     text-align: left;
   }
